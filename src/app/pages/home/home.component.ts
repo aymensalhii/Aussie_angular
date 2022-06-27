@@ -96,6 +96,8 @@ export class HomeComponent implements OnInit {
       this.submitting = true;
       this.router.navigateByUrl('/thank-you')
     }, 5000);
+
+    //save the data to benchmark
   }
 
   test() {
