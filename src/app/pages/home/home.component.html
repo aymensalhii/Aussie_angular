@@ -1,594 +1,595 @@
-<form [formGroup]="mainform">
-  <!-- FIRST STEP -->
-  <div *ngIf="step == 'first'">
-    <div class="form-section section">
-      <div class="top-section bg-top-light-green">
-      </div>
-      <div class="container-lg">
-        <div class="row text-center">
-          <a routerLink="/home"><img src="assets/img/logo.png" alt="" style="max-width: 200px; object-fit: cover; margin: 28px auto 50px auto;"></a>
+<div class="whole-container">
+    <!-- FIRST STEP -->
+    <div *ngIf="step == 'first'">
+      <div class="form-section section">
+        <div class="top-section bg-top-light-green">
         </div>
-        <div class="row">
-          <div class="col-md text-center">
-            <h4 class="title-1">We are Startup Creative Landsay Agency</h4>
-            <figure class="figure top-figure">
-              <img src="assets/img/home1.png" class="figure-img img-fluid rounded" alt="">
-            </figure>
+        <div class="container-lg">
+          <div class="row text-center">
+            <a routerLink="/home"><img src="assets/img/logo.png" alt="" style="max-width: 200px; object-fit: cover; margin: 28px auto 50px auto;"></a>
           </div>
-          <div class="col-md">
-            <div class="card col-12 form-card shadow-sm border-0 mx-auto">
-              <div class="card-body">
-                <h4 class="title-1 text-center mb-4">START EARNING TODAY</h4>
-
-                  <div class="main-form" id="mainForm">
-                    <div class="row name-span">
-                      <label class="col" for="fname">
-                        <input class="form-control" type="text" id="fname" formControlName="fname" placeholder="First Name">
-                          <span class="p-text">First Name</span>
-                      </label>
-                      <label class="col" for="lname">
-                        <input class="form-control" type="text" id="lname" formControlName="lname" placeholder="Last Name">
-                          <span class="p-text">Last Name</span>
-                      </label>
-                    </div>
-                    <div class="row name-span">
-                      <label for="email">
-                        <input class="form-control col-12" type="email" id="email" formControlName="email" placeholder="Email">
-                        <span class="p-text">Email Address</span>
-                      </label>
-                    </div>
-
-                    <div class="row name-span">
-                      <label for="dateOfBirth">
-                        <input class="form-control" type="text" id="dateOfBirth" formControlName="dateOfBirth" placeholder="Date of Birth">
-                        <span class="p-text">Date of Birth</span>
-                      </label>
-                    </div>
-
-                    <div class="row col-12 mx-0 btn-group justify-content-center" role="group" aria-label="Basic radio toggle button group">
-                      <div class="col text-center mx-auto">
-                        <input type="radio" formControlName="gender" class="btn-check" id="btnradio1" autocomplete="off" value="male">
-                        <label class="gender-box" [ngClass]="{'selected-gender': mainform.value.gender == 'male'}" for="btnradio1">
-                          <!--<img src="assets/img/male.svg" class="gender-svg" alt="" style="">-->
-                          <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-                            width="512.000000pt" height="512.000000pt" viewBox="0 0 512.000000 512.000000"
-                            preserveAspectRatio="xMidYMid meet">
-
-                            <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)">
-                            <path d="M2325 5106 c-140 -35 -337 -156 -470 -291 -100 -100 -154 -184 -188
-                            -290 -19 -61 -22 -91 -21 -230 0 -95 8 -208 18 -278 l17 -118 -30 -35 c-39
-                            -43 -45 -70 -37 -148 9 -91 42 -199 86 -286 22 -42 40 -82 40 -89 0 -29 71
-                            -224 111 -302 65 -131 134 -226 238 -330 149 -149 280 -216 441 -226 329 -21
-                            658 289 809 760 17 53 31 102 31 109 0 6 18 47 40 90 50 97 80 210 80 308 0
-                            71 -2 76 -34 110 l-34 35 15 85 c20 125 29 429 13 498 -28 129 -120 243 -284
-                            354 -165 110 -437 229 -615 269 -98 21 -155 23 -226 5z"/>
-                            <path d="M1964 2569 c-35 -39 -221 -155 -358 -224 -134 -67 -188 -90 -436
-                            -185 -137 -52 -216 -99 -307 -184 -93 -87 -148 -164 -212 -296 -113 -234 -160
-                            -535 -140 -886 11 -209 52 -456 80 -490 26 -31 308 -122 521 -168 422 -91 859
-                            -131 1448 -131 602 0 1063 44 1486 140 207 47 459 130 483 159 12 14 46 169
-                            61 276 31 218 29 534 -5 729 -46 267 -159 505 -307 647 -119 115 -184 152
-                            -418 238 -266 98 -629 292 -704 374 l-18 21 -67 -56 c-347 -295 -668 -297
-                            -1014 -7 -73 61 -76 62 -93 43z"/>
-                            </g>
-                          </svg>
+          <div class="row">
+            <div class="col-md text-center">
+              <h4 class="title-1">We are Startup Creative Landsay Agency</h4>
+              <figure class="figure top-figure">
+                <img src="assets/img/home1.png" class="figure-img img-fluid rounded" alt="">
+              </figure>
+            </div>
+            <div class="col-md">
+              <div class="card col-12 form-card shadow-sm border-0 mx-auto">
+                <div class="card-body">
+                  <h4 class="title-1 text-center mb-4">START EARNING TODAY</h4>
+                  <form [formGroup]="mainform">
+                    <div class="main-form" id="mainForm">
+                      <div class="row name-span">
+                        <label class="col" for="fname">
+                          <input class="form-control" type="text" id="fname" formControlName="fname" placeholder="First Name">
+                            <span class="p-text">First Name</span>
+                        </label>
+                        <label class="col" for="lname">
+                          <input class="form-control" type="text" id="lname" formControlName="lname" placeholder="Last Name">
+                            <span class="p-text">Last Name</span>
+                        </label>
+                      </div>
+                      <div class="row name-span">
+                        <label for="email">
+                          <input class="form-control col-12" type="email" id="email" formControlName="email" placeholder="Email">
+                          <span class="p-text">Email Address</span>
                         </label>
                       </div>
 
-                      <div class="col text-center mx-auto">
-                        <input type="radio" formControlName="gender" class="btn-check" id="btnradio2" autocomplete="off" value="female">
-                        <label class="gender-box" [ngClass]="{'selected-gender': mainform.value.gender == 'female'}" for="btnradio2">
-                          <!--<img src="assets/img/female.svg" class="gender-svg" alt="" style="width: 110px; margin: 5px 10px; color: #fff !important; fill: #fff !important;">-->
-                          <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-                            width="512.000000pt" height="512.000000pt" viewBox="0 0 512.000000 512.000000"
-                            preserveAspectRatio="xMidYMid meet">
+                      <div class="row name-span">
+                        <label for="dateOfBirth">
+                          <input class="form-control" type="text" id="dateOfBirth" formControlName="dateOfBirth" placeholder="Date of Birth">
+                          <span class="p-text">Date of Birth</span>
+                        </label>
+                      </div>
 
-                            <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)">
-                            <path d="M2420 5114 c-14 -2 -56 -9 -95 -15 -124 -19 -283 -78 -400 -147 -427
-                            -255 -725 -755 -796 -1337 -6 -55 -11 -199 -11 -320 3 -646 118 -992 370
-                            -1119 118 -60 304 -70 670 -36 169 15 224 17 265 8 32 -6 85 -8 142 -3 136 11
-                            161 11 414 -4 129 -7 270 -10 313 -6 398 34 573 279 627 875 14 148 14 479 0
-                            595 -13 119 -53 303 -89 412 -92 286 -227 509 -430 714 -196 197 -402 313
-                            -649 364 -73 15 -283 28 -331 19z m332 -671 c168 -89 305 -220 393 -377 19
-                            -34 52 -108 75 -165 66 -165 79 -190 108 -198 16 -4 37 1 58 12 34 18 142 126
-                            180 180 l21 30 35 -17 c54 -25 88 -101 88 -193 0 -168 -87 -302 -210 -323
-                            l-43 -7 -42 -125 c-193 -572 -543 -940 -891 -940 -233 1 -471 169 -669 473
-                            -79 122 -176 329 -222 475 -37 117 -39 122 -66 122 -69 0 -148 65 -195 159
-                            -24 50 -27 67 -27 156 0 105 11 142 56 184 21 19 21 19 57 -16 193 -193 639
-                            -74 958 255 88 91 93 94 125 87 166 -35 352 -182 436 -340 15 -30 29 -52 31
-                            -51 2 2 -4 33 -12 70 -44 188 -167 370 -318 471 -32 21 -58 41 -58 45 0 14 30
-                            80 36 80 4 0 47 -21 96 -47z"/>
-                            <path d="M1440 1952 c-370 -186 -647 -496 -751 -842 -23 -73 -23 -88 -27 -593
-                            l-3 -517 1901 0 1901 0 -3 517 c-4 505 -4 520 -27 593 -104 343 -384 658 -748
-                            841 l-97 48 -52 -78 c-78 -120 -156 -211 -226 -267 -83 -66 -74 -61 -389 -227
-                            -151 -80 -293 -156 -316 -169 l-43 -23 -42 23 c-24 13 -166 89 -317 169 -314
-                            166 -306 161 -387 225 -69 56 -152 152 -228 268 l-52 79 -94 -47z"/>
-                            </g>
+                      <div class="row col-12 mx-0 btn-group justify-content-center" role="group" aria-label="Basic radio toggle button group">
+                        <div class="col text-center mx-auto">
+                          <input type="radio" formControlName="gender" class="btn-check" id="btnradio1" autocomplete="off" value="male">
+                          <label class="gender-box" [ngClass]="{'selected-gender': mainform.value.gender == 'male'}" for="btnradio1">
+                            <!--<img src="assets/img/male.svg" class="gender-svg" alt="" style="">-->
+                            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+                              width="512.000000pt" height="512.000000pt" viewBox="0 0 512.000000 512.000000"
+                              preserveAspectRatio="xMidYMid meet">
+
+                              <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)">
+                              <path d="M2325 5106 c-140 -35 -337 -156 -470 -291 -100 -100 -154 -184 -188
+                              -290 -19 -61 -22 -91 -21 -230 0 -95 8 -208 18 -278 l17 -118 -30 -35 c-39
+                              -43 -45 -70 -37 -148 9 -91 42 -199 86 -286 22 -42 40 -82 40 -89 0 -29 71
+                              -224 111 -302 65 -131 134 -226 238 -330 149 -149 280 -216 441 -226 329 -21
+                              658 289 809 760 17 53 31 102 31 109 0 6 18 47 40 90 50 97 80 210 80 308 0
+                              71 -2 76 -34 110 l-34 35 15 85 c20 125 29 429 13 498 -28 129 -120 243 -284
+                              354 -165 110 -437 229 -615 269 -98 21 -155 23 -226 5z"/>
+                              <path d="M1964 2569 c-35 -39 -221 -155 -358 -224 -134 -67 -188 -90 -436
+                              -185 -137 -52 -216 -99 -307 -184 -93 -87 -148 -164 -212 -296 -113 -234 -160
+                              -535 -140 -886 11 -209 52 -456 80 -490 26 -31 308 -122 521 -168 422 -91 859
+                              -131 1448 -131 602 0 1063 44 1486 140 207 47 459 130 483 159 12 14 46 169
+                              61 276 31 218 29 534 -5 729 -46 267 -159 505 -307 647 -119 115 -184 152
+                              -418 238 -266 98 -629 292 -704 374 l-18 21 -67 -56 c-347 -295 -668 -297
+                              -1014 -7 -73 61 -76 62 -93 43z"/>
+                              </g>
                             </svg>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="row name-span">
-                      <button type="button" (click)="Next()" [disabled]="!mainform.valid" class="btn col btn-main mx-3 submit-button shadow-sm">
-                        <div class="spinner-border text-light me-3" role="status" *ngIf="!submitting">
-                          <span class="visually-hidden">Loading...</span>
+                          </label>
                         </div>
-                        GET STARTED
-                      </button>
+
+                        <div class="col text-center mx-auto">
+                          <input type="radio" formControlName="gender" class="btn-check" id="btnradio2" autocomplete="off" value="female">
+                          <label class="gender-box" [ngClass]="{'selected-gender': mainform.value.gender == 'female'}" for="btnradio2">
+                            <!--<img src="assets/img/female.svg" class="gender-svg" alt="" style="width: 110px; margin: 5px 10px; color: #fff !important; fill: #fff !important;">-->
+                            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+                              width="512.000000pt" height="512.000000pt" viewBox="0 0 512.000000 512.000000"
+                              preserveAspectRatio="xMidYMid meet">
+
+                              <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)">
+                              <path d="M2420 5114 c-14 -2 -56 -9 -95 -15 -124 -19 -283 -78 -400 -147 -427
+                              -255 -725 -755 -796 -1337 -6 -55 -11 -199 -11 -320 3 -646 118 -992 370
+                              -1119 118 -60 304 -70 670 -36 169 15 224 17 265 8 32 -6 85 -8 142 -3 136 11
+                              161 11 414 -4 129 -7 270 -10 313 -6 398 34 573 279 627 875 14 148 14 479 0
+                              595 -13 119 -53 303 -89 412 -92 286 -227 509 -430 714 -196 197 -402 313
+                              -649 364 -73 15 -283 28 -331 19z m332 -671 c168 -89 305 -220 393 -377 19
+                              -34 52 -108 75 -165 66 -165 79 -190 108 -198 16 -4 37 1 58 12 34 18 142 126
+                              180 180 l21 30 35 -17 c54 -25 88 -101 88 -193 0 -168 -87 -302 -210 -323
+                              l-43 -7 -42 -125 c-193 -572 -543 -940 -891 -940 -233 1 -471 169 -669 473
+                              -79 122 -176 329 -222 475 -37 117 -39 122 -66 122 -69 0 -148 65 -195 159
+                              -24 50 -27 67 -27 156 0 105 11 142 56 184 21 19 21 19 57 -16 193 -193 639
+                              -74 958 255 88 91 93 94 125 87 166 -35 352 -182 436 -340 15 -30 29 -52 31
+                              -51 2 2 -4 33 -12 70 -44 188 -167 370 -318 471 -32 21 -58 41 -58 45 0 14 30
+                              80 36 80 4 0 47 -21 96 -47z"/>
+                              <path d="M1440 1952 c-370 -186 -647 -496 -751 -842 -23 -73 -23 -88 -27 -593
+                              l-3 -517 1901 0 1901 0 -3 517 c-4 505 -4 520 -27 593 -104 343 -384 658 -748
+                              841 l-97 48 -52 -78 c-78 -120 -156 -211 -226 -267 -83 -66 -74 -61 -389 -227
+                              -151 -80 -293 -156 -316 -169 l-43 -23 -42 23 c-24 13 -166 89 -317 169 -314
+                              166 -306 161 -387 225 -69 56 -152 152 -228 268 l-52 79 -94 -47z"/>
+                              </g>
+                              </svg>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="row name-span">
+                        <button type="button" (click)="Next()" [disabled]="!mainform.valid" class="btn col btn-main mx-3 submit-button shadow-sm">
+                          <div class="spinner-border text-light me-3" role="status" *ngIf="!submitting">
+                            <span class="visually-hidden">Loading...</span>
+                          </div>
+                          GET STARTED
+                        </button>
+                      </div>
+
                     </div>
+                  </form>
 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="how-it-work py-5 bg-light-green">
+        <h4 class="title-1 text-center mb-4">How It Works?</h4>
+        <p class="text-center p-text">
+          It is a long established fact that a reader will be of a page when established fact looking at its layout.
+        </p>
+
+        <div class="container-lg stepper-container mt-5">
+          <div class="row d-flex step-row">
+
+            <div class="col-md text-md-center order-md-2 step-text-box px-4">
+              <h5 class="card-title step-card-title">Sign Up</h5>
+              <p class="p-text step-text">
+                Register for Australia's best paying surveys using our simple form. It's fast, easy and free!
+              </p>
+            </div>
+            <div class="col-md order-md-1 img for-step px-4">
+              <div class="step-circle bg-main shadow"></div>
+              <div class="img-container text-center mb-5">
+                <img src="assets/steps-img/work-1.png" class="figure-img img-fluid rounded" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="row step-row">
+            <div class="col-md text-md-center step-text-box for-step px-4">
+              <div class="step-circle bg-main shadow"></div>
+              <h5 class="card-title text-end-title">Take Surveys</h5>
+              <p class="p-text text-end-text step-text">
+                Answer surveys online. Take more surveys, make more money!
+              </p>
+            </div>
+            <div class="col-md img px-4">
+              <div class="img-container text-center mb-5">
+                <img src="assets/steps-img/work-2.png" class="figure-img img-fluid rounded" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="row step-row">
+
+            <div class="col-md text-md-center order-md-2 step-text-box px-4">
+              <h5 class="card-title step-card-title">Get Paid</h5>
+              <p class="p-text step-text">
+                Get paid for your opinion. Cash will be paid through Paypal, or cheque. Gift cards will be emailed to you.
+              </p>
+            </div>
+            <div class="col-md order-md-1 img for-step px-4" style="border: none !important;">
+              <div class="step-circle bg-main shadow"></div>
+              <div class="img-container text-center mb-5">
+                <img src="assets/steps-img/work-3.png" class="figure-img img-fluid rounded" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="top-brands bg-white py-5">
+        <h4 class="title-1 text-center mb-4">TOP Brands NEED YOUR OPINIONS</h4>
+        <div class="container-lg">
+          <div class="row">
+            <div class="col-md">
+              <p class="p-text brand-text">
+                Top brands need your opinions on their products and services. Earn rewards by sharing your thoughts in online surveys. Earn cash, gift cards or free products. Earn rewards for every survey you complete.
+              </p>
+              <a class="btn btn btn-main submit-button shadow-sm" onclick="scrollToForm()">JOIN FOR FREE</a>
+            </div>
+            <div class="col-md p-0">
+              <div class="img-row">
+                <img src="assets/brands-img/brands_0.jpeg" class="shadow-sm" alt="">
+                <img src="assets/brands-img/brands_1.jpeg" class="shadow-sm" alt="">
+                <img src="assets/brands-img/brands_2.jpeg" class="shadow-sm" alt="">
+              </div>
+              <div class="img-row">
+                <img src="assets/brands-img/brands_3.jpeg" class="shadow-sm" alt="">
+                <img src="assets/brands-img/brands_4.jpeg" class="shadow-sm" alt="">
+                <img src="assets/brands-img/brands_5.jpeg" class="shadow-sm" alt="">
+              </div>
+              <div class="img-row">
+                <img src="assets/brands-img/brands_6.jpeg" class="shadow-sm" alt="">
+                <img src="assets/brands-img/brands_7.jpeg" class="shadow-sm" alt="">
+                <img src="assets/brands-img/brands_8.jpeg" class="shadow-sm" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="our-clients bg-light-green py-5">
+        <h4 class="title-1 text-center mb-4">TOP Brands NEED YOUR OPINIONS</h4>
+        <div class="container-lg">
+          <swiper [config]="swiperConfig"
+            [effect]="'coverflow'"
+            [grabCursor]="true"
+            [centeredSlides]="true"
+
+            [spaceBetween]="30"
+            [grabCursor]="true"
+            [coverflowEffect]="{
+              rotate: 50,
+              stretch: 0,
+              depth: 100,
+              modifier: 1,
+              slideShadows: true
+            }"
+            [pagination]="true"
+            [loop]="true"
+            class="mySwiper"
+          >
+          <ng-template swiperSlide class="swiper-slide">
+            <div class="testimonial-box">
+              <div class="card">
+                <div class="stars-container shadow mx-auto bg-main">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <h5 class="testimonial-title text-center card-title">Love This Website!</h5>
+                <p class="p-text text-center">
+                  As a stay at home mum of two young children, completing surveys is an easy way for me to earn extra money online...
+                </p>
+                <p class="text-end text-main quoter-text">Charlotte - Sydney, Australia</p>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template swiperSlide class="swiper-slide">
+            <div class="testimonial-box">
+              <div class="card">
+                <div class="stars-container shadow mx-auto bg-main">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <h5 class="testimonial-title text-center card-title">Easy Way To Earn Extra Cash!</h5>
+                <p class="p-text text-center">
+                  It's great to be able to take surveys on my mobile while i'm traveling into work on the train. The cash adds up...
+                </p>
+                <p class="text-end text-main quoter-text">Isla - Melbourne, Australia</p>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template swiperSlide class="swiper-slide">
+            <div class="testimonial-box">
+              <div class="card">
+                <div class="stars-container shadow mx-auto bg-main">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <h5 class="testimonial-title text-center card-title">Great For Students!</h5>
+                <p class="p-text text-center">
+                  I'm a university student so trying to earn money can be difficult, as I don't have a part time student job, which is why I signed up...
+                </p>
+                <p class="text-end text-main quoter-text">Olivia - Perth, Australia</p>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template swiperSlide class="swiper-slide">
+            <div class="testimonial-box">
+              <div class="card">
+                <div class="stars-container shadow mx-auto bg-main">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <h5 class="testimonial-title text-center card-title">Love This Website!</h5>
+                <p class="p-text text-center">
+                  As a stay at home mum of two young children, completing surveys is an easy way for me to earn extra money online...
+                </p>
+                <p class="text-end text-main quoter-text">Charlotte - Sydney, Australia</p>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template swiperSlide class="swiper-slide">
+            <div class="testimonial-box">
+              <div class="card">
+                <div class="stars-container shadow mx-auto bg-main">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <h5 class="testimonial-title text-center card-title">Easy Way To Earn Extra Cash!</h5>
+                <p class="p-text text-center">
+                  It's great to be able to take surveys on my mobile while i'm traveling into work on the train. The cash adds up...
+                </p>
+                <p class="text-end text-main quoter-text">Isla - Melbourne, Australia</p>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template swiperSlide class="swiper-slide">
+            <div class="testimonial-box">
+              <div class="card">
+                <div class="stars-container shadow mx-auto bg-main">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <h5 class="testimonial-title text-center card-title">Great For Students!</h5>
+                <p class="p-text text-center">
+                  I'm a university student so trying to earn money can be difficult, as I don't have a part time student job, which is why I signed up...
+                </p>
+                <p class="text-end text-main quoter-text">Olivia - Perth, Australia</p>
+              </div>
+            </div>
+          </ng-template>
+          </swiper>
+        </div>
+
+      </div>
+
+
+      <div class="how-can-help bg-white py-5">
+        <h4 class="title-1 text-center mb-4">How can we Help you?</h4>
+        <p class="text-center p-text mb-5">
+          It is a long established fact that a reader will be of a page when established fact looking at its layout.
+        </p>
+        <div class="container-lg">
+          <div class="row">
+            <div class="col-md d-flex faq-item">
+              <div class="qst-icon">
+                <i class="fas fa-question"></i>
+              </div>
+              <div>
+                <h5 class="title-2">Design Your FAQ Page?</h5>
+                <p class="p-text">
+                  If your FAQ page does consist of multiple pages, then one critical element you'll need to consider is your navigation bar. If your search bar is tricky to use or doesn't yield desired results, customers.
+                </p>
+              </div>
+            </div>
+            <div class="col-md d-flex faq-item">
+              <div class="qst-icon">
+                <i class="fas fa-question"></i>
+              </div>
+              <div>
+                <h5 class="title-2">Design Your FAQ Page?</h5>
+                <p class="p-text">
+                  If your FAQ page does consist of multiple pages, then one critical element you'll need to consider is your navigation bar. If your search bar is tricky to use or doesn't yield desired results, customers.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md d-flex faq-item">
+              <div class="qst-icon">
+                <i class="fas fa-question"></i>
+              </div>
+              <div>
+                <h5 class="title-2">Design Your FAQ Page?</h5>
+                <p class="p-text">
+                  If your FAQ page does consist of multiple pages, then one critical element you'll need to consider is your navigation bar. If your search bar is tricky to use or doesn't yield desired results, customers.
+                </p>
+              </div>
+            </div>
+            <div class="col-md d-flex faq-item">
+              <div class="qst-icon">
+                <i class="fas fa-question"></i>
+              </div>
+              <div>
+                <h5 class="title-2">Design Your FAQ Page?</h5>
+                <p class="p-text">
+                  If your FAQ page does consist of multiple pages, then one critical element you'll need to consider is your navigation bar. If your search bar is tricky to use or doesn't yield desired results, customers.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md d-flex faq-item">
+              <div class="qst-icon">
+                <i class="fas fa-question"></i>
+              </div>
+              <div>
+                <h5 class="title-2">Design Your FAQ Page?</h5>
+                <p class="p-text">
+                  If your FAQ page does consist of multiple pages, then one critical element you'll need to consider is your navigation bar. If your search bar is tricky to use or doesn't yield desired results, customers.
+                </p>
+              </div>
+            </div>
+            <div class="col-md send-qst-box bg-light shadow-sm pt-3 d-flex">
+              <div class="add-qst-col">
+              </div>
+              <div class="col">
+                <h5 class="title-2">Have any quetions?</h5>
+                <p class="p-text">
+                  Send your quetions in our mail
+                </p>
+                <form>
+                  <div class="input-group mb-3" style="width: 100%">
+                    <input type="text" class="form-control" placeholder="Enter your email" aria-label="email" aria-describedby="button-addon2">
+                    <button class="btn btn-main text-light" type="button" id="button-addon2">Submit</button>
                   </div>
-
+                </form>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-
-    <div class="how-it-work py-5 bg-light-green">
-      <h4 class="title-1 text-center mb-4">How It Works?</h4>
-      <p class="text-center p-text">
-        It is a long established fact that a reader will be of a page when established fact looking at its layout.
-      </p>
-
-      <div class="container-lg stepper-container mt-5">
-        <div class="row d-flex step-row">
-
-          <div class="col-md text-md-center order-md-2 step-text-box px-4">
-            <h5 class="card-title step-card-title">Sign Up</h5>
-            <p class="p-text step-text">
-              Register for Australia's best paying surveys using our simple form. It's fast, easy and free!
-            </p>
-          </div>
-          <div class="col-md order-md-1 img for-step px-4">
-            <div class="step-circle bg-main shadow"></div>
-            <div class="img-container text-center mb-5">
-              <img src="assets/steps-img/work-1.png" class="figure-img img-fluid rounded" alt="">
-            </div>
-          </div>
-        </div>
-        <div class="row step-row">
-          <div class="col-md text-md-center step-text-box for-step px-4">
-            <div class="step-circle bg-main shadow"></div>
-            <h5 class="card-title text-end-title">Take Surveys</h5>
-            <p class="p-text text-end-text step-text">
-              Answer surveys online. Take more surveys, make more money!
-            </p>
-          </div>
-          <div class="col-md img px-4">
-            <div class="img-container text-center mb-5">
-              <img src="assets/steps-img/work-2.png" class="figure-img img-fluid rounded" alt="">
-            </div>
-          </div>
-        </div>
-        <div class="row step-row">
-
-          <div class="col-md text-md-center order-md-2 step-text-box px-4">
-            <h5 class="card-title step-card-title">Get Paid</h5>
-            <p class="p-text step-text">
-              Get paid for your opinion. Cash will be paid through Paypal, or cheque. Gift cards will be emailed to you.
-            </p>
-          </div>
-          <div class="col-md order-md-1 img for-step px-4" style="border: none !important;">
-            <div class="step-circle bg-main shadow"></div>
-            <div class="img-container text-center mb-5">
-              <img src="assets/steps-img/work-3.png" class="figure-img img-fluid rounded" alt="">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
 
-    <div class="top-brands bg-white py-5">
-      <h4 class="title-1 text-center mb-4">TOP Brands NEED YOUR OPINIONS</h4>
-      <div class="container-lg">
-        <div class="row">
-          <div class="col-md">
-            <p class="p-text brand-text">
-              Top brands need your opinions on their products and services. Earn rewards by sharing your thoughts in online surveys. Earn cash, gift cards or free products. Earn rewards for every survey you complete.
-            </p>
-            <a class="btn btn btn-main submit-button shadow-sm" onclick="scrollToForm()">JOIN FOR FREE</a>
-          </div>
-          <div class="col-md p-0">
-            <div class="img-row">
-              <img src="assets/brands-img/brands_0.jpeg" class="shadow-sm" alt="">
-              <img src="assets/brands-img/brands_1.jpeg" class="shadow-sm" alt="">
-              <img src="assets/brands-img/brands_2.jpeg" class="shadow-sm" alt="">
-            </div>
-            <div class="img-row">
-              <img src="assets/brands-img/brands_3.jpeg" class="shadow-sm" alt="">
-              <img src="assets/brands-img/brands_4.jpeg" class="shadow-sm" alt="">
-              <img src="assets/brands-img/brands_5.jpeg" class="shadow-sm" alt="">
-            </div>
-            <div class="img-row">
-              <img src="assets/brands-img/brands_6.jpeg" class="shadow-sm" alt="">
-              <img src="assets/brands-img/brands_7.jpeg" class="shadow-sm" alt="">
-              <img src="assets/brands-img/brands_8.jpeg" class="shadow-sm" alt="">
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-
-    <div class="our-clients bg-light-green py-5">
-      <h4 class="title-1 text-center mb-4">TOP Brands NEED YOUR OPINIONS</h4>
-      <div class="container-lg">
-        <swiper [config]="swiperConfig"
-          [effect]="'coverflow'"
-          [grabCursor]="true"
-          [centeredSlides]="true"
-
-          [spaceBetween]="30"
-          [grabCursor]="true"
-          [coverflowEffect]="{
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: true
-          }"
-          [pagination]="true"
-          [loop]="true"
-          class="mySwiper"
-        >
-        <ng-template swiperSlide class="swiper-slide">
-          <div class="testimonial-box">
-            <div class="card">
-              <div class="stars-container shadow mx-auto bg-main">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
+      <div class="contact-us bg-light-green py-5">
+        <h4 class="title-1 text-center mb-4">Contact Us</h4>
+        <p class="text-center p-text mb-5">
+          It is a long established fact that a reader will be of a page when established fact looking at its layout.
+        </p>
+        <div class="container-lg">
+          <div class="row">
+            <div class="col-md contact-links">
+              <div class="contact-link-item d-flex">
+                <div class="contact-link-icon-box"><i class="fas fa-envelope"></i></div>
+                <a href="https://wwww.google.com">
+                  sales@qmediax.com
+                </a>
               </div>
-              <h5 class="testimonial-title text-center card-title">Love This Website!</h5>
-              <p class="p-text text-center">
-                As a stay at home mum of two young children, completing surveys is an easy way for me to earn extra money online...
-              </p>
-              <p class="text-end text-main quoter-text">Charlotte - Sydney, Australia</p>
-            </div>
-          </div>
-        </ng-template>
-        <ng-template swiperSlide class="swiper-slide">
-          <div class="testimonial-box">
-            <div class="card">
-              <div class="stars-container shadow mx-auto bg-main">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
+              <div class="contact-link-item d-flex">
+                <div class="contact-link-icon-box"><i class="fas fa-globe"></i></div>
+                <a href="#">
+                  www.qmediax.com
+                </a>
               </div>
-              <h5 class="testimonial-title text-center card-title">Easy Way To Earn Extra Cash!</h5>
-              <p class="p-text text-center">
-                It's great to be able to take surveys on my mobile while i'm traveling into work on the train. The cash adds up...
-              </p>
-              <p class="text-end text-main quoter-text">Isla - Melbourne, Australia</p>
-            </div>
-          </div>
-        </ng-template>
-        <ng-template swiperSlide class="swiper-slide">
-          <div class="testimonial-box">
-            <div class="card">
-              <div class="stars-container shadow mx-auto bg-main">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-              <h5 class="testimonial-title text-center card-title">Great For Students!</h5>
-              <p class="p-text text-center">
-                I'm a university student so trying to earn money can be difficult, as I don't have a part time student job, which is why I signed up...
-              </p>
-              <p class="text-end text-main quoter-text">Olivia - Perth, Australia</p>
-            </div>
-          </div>
-        </ng-template>
-        <ng-template swiperSlide class="swiper-slide">
-          <div class="testimonial-box">
-            <div class="card">
-              <div class="stars-container shadow mx-auto bg-main">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-              <h5 class="testimonial-title text-center card-title">Love This Website!</h5>
-              <p class="p-text text-center">
-                As a stay at home mum of two young children, completing surveys is an easy way for me to earn extra money online...
-              </p>
-              <p class="text-end text-main quoter-text">Charlotte - Sydney, Australia</p>
-            </div>
-          </div>
-        </ng-template>
-        <ng-template swiperSlide class="swiper-slide">
-          <div class="testimonial-box">
-            <div class="card">
-              <div class="stars-container shadow mx-auto bg-main">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-              <h5 class="testimonial-title text-center card-title">Easy Way To Earn Extra Cash!</h5>
-              <p class="p-text text-center">
-                It's great to be able to take surveys on my mobile while i'm traveling into work on the train. The cash adds up...
-              </p>
-              <p class="text-end text-main quoter-text">Isla - Melbourne, Australia</p>
-            </div>
-          </div>
-        </ng-template>
-        <ng-template swiperSlide class="swiper-slide">
-          <div class="testimonial-box">
-            <div class="card">
-              <div class="stars-container shadow mx-auto bg-main">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-              <h5 class="testimonial-title text-center card-title">Great For Students!</h5>
-              <p class="p-text text-center">
-                I'm a university student so trying to earn money can be difficult, as I don't have a part time student job, which is why I signed up...
-              </p>
-              <p class="text-end text-main quoter-text">Olivia - Perth, Australia</p>
-            </div>
-          </div>
-        </ng-template>
-        </swiper>
-      </div>
-
-    </div>
-
-
-    <div class="how-can-help bg-white py-5">
-      <h4 class="title-1 text-center mb-4">How can we Help you?</h4>
-      <p class="text-center p-text mb-5">
-        It is a long established fact that a reader will be of a page when established fact looking at its layout.
-      </p>
-      <div class="container-lg">
-        <div class="row">
-          <div class="col-md d-flex faq-item">
-            <div class="qst-icon">
-              <i class="fas fa-question"></i>
-            </div>
-            <div>
-              <h5 class="title-2">Design Your FAQ Page?</h5>
-              <p class="p-text">
-                If your FAQ page does consist of multiple pages, then one critical element you'll need to consider is your navigation bar. If your search bar is tricky to use or doesn't yield desired results, customers.
-              </p>
-            </div>
-          </div>
-          <div class="col-md d-flex faq-item">
-            <div class="qst-icon">
-              <i class="fas fa-question"></i>
-            </div>
-            <div>
-              <h5 class="title-2">Design Your FAQ Page?</h5>
-              <p class="p-text">
-                If your FAQ page does consist of multiple pages, then one critical element you'll need to consider is your navigation bar. If your search bar is tricky to use or doesn't yield desired results, customers.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md d-flex faq-item">
-            <div class="qst-icon">
-              <i class="fas fa-question"></i>
-            </div>
-            <div>
-              <h5 class="title-2">Design Your FAQ Page?</h5>
-              <p class="p-text">
-                If your FAQ page does consist of multiple pages, then one critical element you'll need to consider is your navigation bar. If your search bar is tricky to use or doesn't yield desired results, customers.
-              </p>
-            </div>
-          </div>
-          <div class="col-md d-flex faq-item">
-            <div class="qst-icon">
-              <i class="fas fa-question"></i>
-            </div>
-            <div>
-              <h5 class="title-2">Design Your FAQ Page?</h5>
-              <p class="p-text">
-                If your FAQ page does consist of multiple pages, then one critical element you'll need to consider is your navigation bar. If your search bar is tricky to use or doesn't yield desired results, customers.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md d-flex faq-item">
-            <div class="qst-icon">
-              <i class="fas fa-question"></i>
-            </div>
-            <div>
-              <h5 class="title-2">Design Your FAQ Page?</h5>
-              <p class="p-text">
-                If your FAQ page does consist of multiple pages, then one critical element you'll need to consider is your navigation bar. If your search bar is tricky to use or doesn't yield desired results, customers.
-              </p>
-            </div>
-          </div>
-          <div class="col-md send-qst-box bg-light shadow-sm pt-3 d-flex">
-            <div class="add-qst-col">
-            </div>
-            <div class="col">
-              <h5 class="title-2">Have any quetions?</h5>
-              <p class="p-text">
-                Send your quetions in our mail
-              </p>
-              <form>
-                <div class="input-group mb-3" style="width: 100%">
-                  <input type="text" class="form-control" placeholder="Enter your email" aria-label="email" aria-describedby="button-addon2">
-                  <button class="btn btn-main text-light" type="button" id="button-addon2">Submit</button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="contact-us bg-light-green py-5">
-      <h4 class="title-1 text-center mb-4">Contact Us</h4>
-      <p class="text-center p-text mb-5">
-        It is a long established fact that a reader will be of a page when established fact looking at its layout.
-      </p>
-      <div class="container-lg">
-        <div class="row">
-          <div class="col-md contact-links">
-            <div class="contact-link-item d-flex">
-              <div class="contact-link-icon-box"><i class="fas fa-envelope"></i></div>
-              <a href="https://wwww.google.com">
-                sales@qmediax.com
-              </a>
-            </div>
-            <div class="contact-link-item d-flex">
-              <div class="contact-link-icon-box"><i class="fas fa-globe"></i></div>
-              <a href="#">
-                www.qmediax.com
-              </a>
-            </div>
-            <div class="contact-link-item d-flex">
-              <div class="contact-link-icon-box"><i class="fas fa-phone"></i></div>
-              <p>
-                +61 435437488
-              </p>
-            </div>
-            <div class="contact-link-item d-flex">
-              <div class="contact-link-icon-box"><i class="fas fa-building"></i></div>
-              <p>
-                9:00 AM - 6:00 PM
-              </p>
-            </div>
-            <div class="contact-link-item d-flex">
-              <div class="contact-link-icon-box"><i class="fas fa-map-marker-alt"></i></div>
-              <p>
-                10/13, Rosedale Avenue, Glen Huntly, Victoria 3163
-              </p>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="col">
-              <form>
-                <div class="input-group mb-3" style="width: 100%">
-                  <input type="text" class="form-control" placeholder="Enter your email" aria-label="email" aria-describedby="button-addon2">
-                  <button class="btn btn-main text-light" type="button" id="button-addon2">Subscribe</button>
-                </div>
-              </form>
-              <div class="row text-center">
-                <a routerLink="/home"><img src="assets/img/logo.png" alt="" style="max-width: 200px; object-fit: cover; margin: 28px auto 50px auto;"></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- SECOND STEP -->
-
-  <div *ngIf="step == 'second'">
-    <div class="form-section section">
-      <div class="top-section-thanks bg-top-light-green">
-      </div>
-      <div class="container-lg">
-        <div class="row text-center">
-          <a routerLink="/home"><img src="assets/img/logo.png" alt="" style="max-width: 200px; object-fit: cover; margin: 28px auto 50px auto;"></a>
-        </div>
-
-        <div class="multi-select-section" style="margin-top: 100px;">
-          <div class="multiselect-header d-flex justify-content-between">
-            <div><button class="btn btn-light" (click)="Back()">Go Back</button></div>
-            <div><button class="btn btn-main submit-button" style="font-size: 18px;">Select All</button></div>
-          </div>
-          <div class="multiselect-body my-4">
-            <div style="min-height: 200px; width: 100%;">
-              <div class="card shadow-sm py-3 mb-4 pe-3" style="width: calc(100% - 30px); margin-left: 30px; border-radius: 6px; background: #fff; padding-left: 190px; position: relative;">
-                <div class="select-logo-box shadow-sm" style="width: 200px; height: 70px; line-height: 62px; padding: 4px; background: #fff; border-radius: 6px; top: 0; left: 0; margin-top: 10px; margin-left: -30px; position: absolute;">
-                  <img src="assets/img/yougov.png" style="width: 100%; " alt="">
-                </div>
+              <div class="contact-link-item d-flex">
+                <div class="contact-link-icon-box"><i class="fas fa-phone"></i></div>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae odio illum accusamus voluptatem aut maxime, exercitationem in, iure quas, a corporis amet voluptates voluptas enim sapiente quos nisi minima iusto.
+                  +61 435437488
                 </p>
-                <div class="row col-12 mx-0 justify-content-end">
-                  <button class="btn btn-light bg-top-light-green" style="min-width: 120px; max-width: 120px; height: 42px; border-radius: 4px;">Select</button>
-                </div>
               </div>
-
-              <div class="card shadow-sm py-3 mb-4 pe-3" style="width: calc(100% - 30px); margin-left: 30px; border-radius: 6px; background: #fff; padding-left: 190px; position: relative;">
-                <div class="select-logo-box shadow-sm" style="width: 200px; height: 70px; line-height: 62px; padding: 4px; background: #fff; border-radius: 6px; top: 0; left: 0; margin-top: 10px; margin-left: -30px; position: absolute;">
-                  <img src="assets/img/yougov.png" style="width: 100%; " alt="">
-                </div>
+              <div class="contact-link-item d-flex">
+                <div class="contact-link-icon-box"><i class="fas fa-building"></i></div>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae odio illum accusamus voluptatem aut maxime, exercitationem in, iure quas, a corporis amet voluptates voluptas enim sapiente quos nisi minima iusto.
+                  9:00 AM - 6:00 PM
                 </p>
-                <div class="row col-12 mx-0 justify-content-end">
-                  <button class="btn btn-light bg-top-light-green" style="min-width: 120px; max-width: 120px; height: 42px; border-radius: 4px;">Select</button>
-                </div>
               </div>
-
-              <div class="card shadow-sm py-3 mb-4 pe-3" style="width: calc(100% - 30px); margin-left: 30px; border-radius: 6px; background: #fff; padding-left: 190px; position: relative;">
-                <div class="select-logo-box shadow-sm" style="width: 200px; height: 70px; line-height: 62px; padding: 4px; background: #fff; border-radius: 6px; top: 0; left: 0; margin-top: 10px; margin-left: -30px; position: absolute;">
-                  <img src="assets/img/yougov.png" style="width: 100%; " alt="">
-                </div>
+              <div class="contact-link-item d-flex">
+                <div class="contact-link-icon-box"><i class="fas fa-map-marker-alt"></i></div>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae odio illum accusamus voluptatem aut maxime, exercitationem in, iure quas, a corporis amet voluptates voluptas enim sapiente quos nisi minima iusto.
+                  10/13, Rosedale Avenue, Glen Huntly, Victoria 3163
                 </p>
-                <div class="row col-12 mx-0 justify-content-end">
-                  <button class="btn btn-light bg-top-light-green" style="min-width: 120px; max-width: 120px; height: 42px; border-radius: 4px;">Select</button>
-                </div>
-              </div>
-
-              <div class="card shadow-sm py-3 mb-4 pe-3" style="width: calc(100% - 30px); margin-left: 30px; border-radius: 6px; background: #fff; padding-left: 190px; position: relative;">
-                <div class="select-logo-box shadow-sm" style="width: 200px; height: 70px; line-height: 62px; padding: 4px; background: #fff; border-radius: 6px; top: 0; left: 0; margin-top: 10px; margin-left: -30px; position: absolute;">
-                  <img src="assets/img/yougov.png" style="width: 100%; " alt="">
-                </div>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae odio illum accusamus voluptatem aut maxime, exercitationem in, iure quas, a corporis amet voluptates voluptas enim sapiente quos nisi minima iusto.
-                </p>
-                <div class="row col-12 mx-0 justify-content-end">
-                  <button class="btn btn-light bg-top-light-green" style="min-width: 120px; max-width: 120px; height: 42px; border-radius: 4px;">Select</button>
-                </div>
               </div>
             </div>
-          </div>
-          <div class="multiselect-footer">
-            <div class="row col-12 my-4 mx-0">
-              <button type="submit" (click)="test()" class="btn mx-auto col-sm-3 btn-main submit-button shadow-sm">Submit</button>
+            <div class="col-md">
+              <div class="col">
+                <form [formGroup]="subscribeForm">
+                  <div class="input-group mb-3" style="width: 100%">
+                    <input type="text" class="form-control" placeholder="Enter your email" aria-label="email" aria-describedby="button-addon2">
+                    <button class="btn btn-main text-light" type="button" disabled="!subscribeForm.valid" id="button-addon2" (click)="subscribe()">Subscribe</button>
+                  </div>
+                </form>
+                <div class="row text-center">
+                  <a routerLink="/home"><img src="assets/img/logo.png" alt="" style="max-width: 200px; object-fit: cover; margin: 28px auto 50px auto;"></a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-
       </div>
     </div>
+
+    <!-- SECOND STEP -->
+
+    <div *ngIf="step == 'second'">
+      <div class="form-section section">
+        <div class="top-section-thanks bg-top-light-green">
+        </div>
+        <div class="container-lg">
+          <div class="row text-center">
+            <a routerLink="/home"><img src="assets/img/logo.png" alt="" style="max-width: 200px; object-fit: cover; margin: 28px auto 50px auto;"></a>
+          </div>
+
+          <div class="multi-select-section" style="margin-top: 100px;">
+            <div class="multiselect-header d-flex justify-content-between">
+              <div><button class="btn btn-light" (click)="Back()">Go Back</button></div>
+              <div><button class="btn btn-main submit-button" style="font-size: 18px;">Select All</button></div>
+            </div>
+            <div class="multiselect-body my-4">
+              <div style="min-height: 200px; width: 100%;">
+                <div class="card shadow-sm py-3 mb-4 pe-3" style="width: calc(100% - 30px); margin-left: 30px; border-radius: 6px; background: #fff; padding-left: 190px; position: relative;">
+                  <div class="select-logo-box shadow-sm" style="width: 200px; height: 70px; line-height: 62px; padding: 4px; background: #fff; border-radius: 6px; top: 0; left: 0; margin-top: 10px; margin-left: -30px; position: absolute;">
+                    <img src="assets/img/yougov.png" style="width: 100%; " alt="">
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae odio illum accusamus voluptatem aut maxime, exercitationem in, iure quas, a corporis amet voluptates voluptas enim sapiente quos nisi minima iusto.
+                  </p>
+                  <div class="row col-12 mx-0 justify-content-end">
+                    <button class="btn btn-light bg-top-light-green" style="min-width: 120px; max-width: 120px; height: 42px; border-radius: 4px;">Select</button>
+                  </div>
+                </div>
+
+                <div class="card shadow-sm py-3 mb-4 pe-3" style="width: calc(100% - 30px); margin-left: 30px; border-radius: 6px; background: #fff; padding-left: 190px; position: relative;">
+                  <div class="select-logo-box shadow-sm" style="width: 200px; height: 70px; line-height: 62px; padding: 4px; background: #fff; border-radius: 6px; top: 0; left: 0; margin-top: 10px; margin-left: -30px; position: absolute;">
+                    <img src="assets/img/yougov.png" style="width: 100%; " alt="">
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae odio illum accusamus voluptatem aut maxime, exercitationem in, iure quas, a corporis amet voluptates voluptas enim sapiente quos nisi minima iusto.
+                  </p>
+                  <div class="row col-12 mx-0 justify-content-end">
+                    <button class="btn btn-light bg-top-light-green" style="min-width: 120px; max-width: 120px; height: 42px; border-radius: 4px;">Select</button>
+                  </div>
+                </div>
+
+                <div class="card shadow-sm py-3 mb-4 pe-3" style="width: calc(100% - 30px); margin-left: 30px; border-radius: 6px; background: #fff; padding-left: 190px; position: relative;">
+                  <div class="select-logo-box shadow-sm" style="width: 200px; height: 70px; line-height: 62px; padding: 4px; background: #fff; border-radius: 6px; top: 0; left: 0; margin-top: 10px; margin-left: -30px; position: absolute;">
+                    <img src="assets/img/yougov.png" style="width: 100%; " alt="">
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae odio illum accusamus voluptatem aut maxime, exercitationem in, iure quas, a corporis amet voluptates voluptas enim sapiente quos nisi minima iusto.
+                  </p>
+                  <div class="row col-12 mx-0 justify-content-end">
+                    <button class="btn btn-light bg-top-light-green" style="min-width: 120px; max-width: 120px; height: 42px; border-radius: 4px;">Select</button>
+                  </div>
+                </div>
+
+                <div class="card shadow-sm py-3 mb-4 pe-3" style="width: calc(100% - 30px); margin-left: 30px; border-radius: 6px; background: #fff; padding-left: 190px; position: relative;">
+                  <div class="select-logo-box shadow-sm" style="width: 200px; height: 70px; line-height: 62px; padding: 4px; background: #fff; border-radius: 6px; top: 0; left: 0; margin-top: 10px; margin-left: -30px; position: absolute;">
+                    <img src="assets/img/yougov.png" style="width: 100%; " alt="">
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae odio illum accusamus voluptatem aut maxime, exercitationem in, iure quas, a corporis amet voluptates voluptas enim sapiente quos nisi minima iusto.
+                  </p>
+                  <div class="row col-12 mx-0 justify-content-end">
+                    <button class="btn btn-light bg-top-light-green" style="min-width: 120px; max-width: 120px; height: 42px; border-radius: 4px;">Select</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="multiselect-footer">
+              <div class="row col-12 my-4 mx-0">
+                <button type="submit" (click)="test()" class="btn mx-auto col-sm-3 btn-main submit-button shadow-sm">Submit</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+  <div class="footer bg-main text-center text-light pt-5 pb-3">
+    <div class="social-box">
+      <a target="_blank" href="https://www.linkedin.com/company/qmediax/">
+        <label class="social-item shadow" for="linkedin"><i class="fab fa-linkedin-in"></i></label>
+      </a>
+
+      <a target="_blank" href="https://www.facebook.com/QualityMediaExchange">
+        <label class="social-item shadow" for="fb"><i class="fab fa-facebook-f"></i></label>
+      </a>
+
+      <a target="_blank" href="https://qmediax.com/qmediax-presentation/">
+        <label class="social-item shadow" for="insta"><i class="fab fa-instagram"></i></label>
+      </a>
+    </div>
+
+    <div class="terms-links">
+      <a class="terms-link-item" href="#">Terms & Conditions</a>    |    <a class="terms-link-item" href="#">Privacy Policy</a>
+    </div>
+    <p class="copy-right">Copyright © 2022 All Rights Reserved. QmediaX Pty Ltd</p>
   </div>
-</form>
-
-
-<div class="footer bg-main text-center text-light pt-5 pb-3">
-  <div class="social-box">
-    <a target="_blank" href="https://www.linkedin.com/company/qmediax/">
-      <label class="social-item shadow" for="linkedin"><i class="fab fa-linkedin-in"></i></label>
-    </a>
-
-    <a target="_blank" href="https://www.facebook.com/QualityMediaExchange">
-      <label class="social-item shadow" for="fb"><i class="fab fa-facebook-f"></i></label>
-    </a>
-
-    <a target="_blank" href="https://qmediax.com/qmediax-presentation/">
-      <label class="social-item shadow" for="insta"><i class="fab fa-instagram"></i></label>
-    </a>
-  </div>
-
-  <div class="terms-links">
-    <a class="terms-link-item" href="#">Terms & Conditions</a>    |    <a class="terms-link-item" href="#">Privacy Policy</a>
-  </div>
-  <p class="copy-right">Copyright © 2022 All Rights Reserved. QmediaX Pty Ltd</p>
 </div>

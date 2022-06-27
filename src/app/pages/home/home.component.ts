@@ -53,6 +53,10 @@ export class HomeComponent implements OnInit {
     transaction_id: ['']
   });
 
+  subscribeForm = this.fb.group({
+    email: ['', Validators.required]
+  });
+
   organizationPart = this.fb.group({
     org_id: ['']
   });
@@ -103,6 +107,10 @@ export class HomeComponent implements OnInit {
   }
   Back() {
     this.step = 'first';
+  }
+
+  subscribe() {
+    console.log(this.subscribeForm.value);
   }
 
 }

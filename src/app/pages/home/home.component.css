@@ -19,6 +19,10 @@
   color: #9DA9BB;
 }
 
+.whole-container {
+  overflow-x: hidden;
+}
+
 
 
 /* different styles */
